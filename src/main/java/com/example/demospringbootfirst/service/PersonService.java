@@ -1,9 +1,5 @@
 package com.example.demospringbootfirst.service;
 
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
-import java.util.List;
-import com.example.demospringbootfirst.mapper.PersonMapper;
 import com.example.demospringbootfirst.model.Person;
 
 public interface PersonService{

@@ -7,6 +7,8 @@ spring:
     suffix: .html
     encoding: utf-8
     cache: false
+#  main:
+#    allow-bean-definition-overriding: true
   resources:
     static-locations: classpath:/static,classpath:/META-INF/resources,classpath:/templates/
   datasource:
