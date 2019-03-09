@@ -9,9 +9,9 @@ import javax.xml.ws.soap.MTOM;
  * @name  暴露服务名称
  * @targetNamespace  命名空间,一般是接口的包名倒序
  */
-@WebService(name = "SoapPersonService", targetNamespace = "http://soapService.demospringbootfirst.example.com/")
+@WebService(name = "SoapPersonService")
 @MTOM(threshold = 1024)
 public interface SoapPersonService {
     @WebMethod
-    Person getPersonById(Integer id);
+    String getPersonById(Integer id);
 }

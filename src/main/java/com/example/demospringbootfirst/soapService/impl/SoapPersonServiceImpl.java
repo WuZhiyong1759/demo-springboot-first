@@ -4,6 +4,8 @@ import com.example.demospringbootfirst.model.Person;
 import com.example.demospringbootfirst.soapService.SoapPersonService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
 /**
  * @ClassName SoapPersonServiceImpl
  * @Author wuzhiyong
@@ -11,15 +13,12 @@ import javax.annotation.Resource;
  * @Version 1.0
  **/
 @Service
+@WebService(targetNamespace = "http://soapService.demospringbootfirst.example.com/")
 public class SoapPersonServiceImpl  implements SoapPersonService {
     @Resource
     PersonMapper personMapper;
     @Override
-//    @WebMethod(action = "urn:initSystem")
-//    @RequestWrapper(localName = "initSystem", targetNamespace = "http://service.thirdBayonet.webservice.bms.hikvision.com")
-//    @ResponseWrapper(localName = "initSystemResponse", targetNamespace = "http://service.thirdBayonet.webservice.bms.hikvision.com")
-//    @WebResult(name = "return", targetNamespace = "http://service.thirdBayonet.webservice.bms.hikvision.com")
-    public Person getPersonById(Integer id) {
-        return personMapper.selectByPrimaryKey(id);
+    public String getPersonById(Integer id) {
+        return personMapper.selectByPrimaryKey(id).toString();
     }
 }
