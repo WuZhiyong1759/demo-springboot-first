@@ -2,17 +2,16 @@ package com.example.demospringbootfirst.controller;
 
 import com.example.demospringbootfirst.model.Person;
 import com.example.demospringbootfirst.service.PersonService;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
+/**
+ * @author wuzhiyong
+ */
 @RestController
-@EnableAutoConfiguration
 public class PersonController {
     @Resource
     PersonService personService;

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+/**
+ * @author wuzhiyong
+ */
 @RestController
-@EnableAutoConfiguration
 public class NewsController {
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());
     @Resource

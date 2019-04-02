@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -19,7 +20,7 @@ import javax.xml.ws.Endpoint;
 
 @EnableSwagger2
 @SpringBootApplication
-@EnableAutoConfiguration
+@EnableCaching
 public class DemoSpringbootFirstApplication {
 
     @Autowired

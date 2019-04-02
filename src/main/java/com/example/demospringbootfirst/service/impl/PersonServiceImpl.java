@@ -3,6 +3,8 @@ package com.example.demospringbootfirst.service.impl;
 import com.example.demospringbootfirst.mapper.PersonMapper;
 import com.example.demospringbootfirst.model.Person;
 import com.example.demospringbootfirst.service.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -10,6 +12,9 @@ import javax.annotation.Resource;
 public class PersonServiceImpl implements PersonService {
     @Resource
     private PersonMapper personMapper;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
 
     @Override
     public int deleteByPrimaryKey(Integer id){
